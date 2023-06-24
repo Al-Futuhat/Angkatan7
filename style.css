@@ -23,11 +23,11 @@ button{
 }
 
 nav {
+  display: flex;
+  justify-content: space-around;
   background:linear-gradient(rgb(14, 192, 247),rgb(11, 200, 224));
   padding: 10px 40px 10px 70px;
-  border: 1px solid #364f6b;
-  position: sticky;
-  position: -webkit-sticky;
+  border: 3px solid #ffffff;
   top: 0;
   z-index: 1;
   border-bottom: 1px solid #364f6b;
@@ -37,9 +37,10 @@ nav {
 
 nav ul {
   display: flex;
-  position: sticky;
-  position: -webkit-sticky;
+  
   list-style: none;
+  
+  
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -56,6 +57,7 @@ nav ul li.logo {
 nav ul li.logo:hover {
   color: rgba(255, 255, 255, 0.911);
 }
+
 
 /* Menu item */
 nav ul .items {
@@ -120,7 +122,7 @@ nav ul .search-icon .icon .span {
   color: #fff;
   border-style: solid;
   max-width: auto;
-  height: 690px;
+  height: 590px;
   position: relative;
 }
 
@@ -153,10 +155,16 @@ nav ul .search-icon .icon .span {
   -webkit-animation: fade3 8s infinite;
 }
 .slide4 {
-  background: url(img/osis2.jpg) no-repeat center;
+  background: url(img/) no-repeat center;
   background-size: cover;
   animation: fade4 8s infinite;
   -webkit-animation: fade4 8s infinite;
+}
+@media screen and (max-width: 756px) {
+  .slide {
+    height: 230px;
+    width: 100%;
+  }
 }
 
 /* Property CSS Animasi Slide Show*/
@@ -235,7 +243,7 @@ nav ul .search-icon .icon .span {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  padding: 40px 0;
+  padding: 4px 0;
 }
 
 .sambutan h1 {
@@ -243,9 +251,7 @@ nav ul .search-icon .icon .span {
   text-transform: uppercase;
   font-weight: bold;
 }
-.alfutuhat {
-  font-size: medium;
-}
+
 .sambutan p {
   color: #00d9ff;
   padding: 15px 0;
@@ -261,6 +267,7 @@ nav ul .search-icon .icon .span {
 }
 
 .kepsek .container {
+  justify-content: center;
   background-image: url(img/rm222-mind-16.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,6 +275,7 @@ nav ul .search-icon .icon .span {
 }
 
 .kepsek .container img {
+  justify-content: space-between;
   border-style: solid;
   border-width: 4px;
   width: 337px;
@@ -275,6 +283,14 @@ nav ul .search-icon .icon .span {
   border-radius: 50%;
   -webkit-box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 576px) {
+  .kepsek .container img {
+    width:  270px;
+    height: 275px ;
+   }
+  
 }
 
 /*Untuk Visi Misi*/
@@ -316,6 +332,7 @@ nav ul .search-icon .icon .span {
 
 /* Property CSS Galeri*/
 
+
 .galeri {
   padding: 50px 0;
   margin-top: 80px;
@@ -323,9 +340,10 @@ nav ul .search-icon .icon .span {
 .galeri h2 {
   text-align: center;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
 }
+
 .galeri  {
   color: #25ccff;
   padding: 15px 0;
@@ -349,12 +367,25 @@ nav ul .search-icon .icon .span {
 
 .galeri .boxGaleri .perBox {
   border-style: solid;
-  border-width: 4px;
+  border-width: 2px;
+  border-radius: 10px;
   position: relative;
   margin: 10px;
-  width: 350px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
   overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .galeri .boxGaleri .perBox  {
+    border-style: solid;
+  border-width: 0.1rem;
+  position: relative;
+  margin: 5px;
+  width: 80px;
+  height: 85px;
+  font: 0.2px;
+  overflow: hidden;
+  }
 }
 
 .galeri .boxGaleri .perBox img {
@@ -389,8 +420,16 @@ nav ul .search-icon .icon .span {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 576px) {
+  .galeri .boxGaleri .perBox h3 {
+    font-size: 0.5rem;
+    height: fit-content;
+  }
+  
+}
+
 .galeri .boxGaleri .perBox:hover img {
-  opacity: 0.6;
+  opacity: 0.9;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
@@ -425,8 +464,19 @@ nav ul .search-icon .icon .span {
 .containerArtikelHome .artikelHome .perArtikelHome {
   width: 350px;
   margin: 10px;
+  position: relative;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .containerArtikelHome .artikelHome .perArtikelHome {
+    width: 250px;
+    height: ;
+    position: relative;
+
+  }
+  
 }
 
 .containerArtikelHome .artikelHome .perArtikelHome img {
@@ -441,9 +491,9 @@ nav ul .search-icon .icon .span {
 .containerArtikelHome .artikelHome .perArtikelHome h3 {
   border-style: solid;
   border-width: 4px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
-  font-weight: 900;
+  font-weight: 700;
   color: rgb(255, 255, 255)  ;
   background-color: rgb(20, 169, 255);
 }
@@ -458,13 +508,13 @@ nav ul .search-icon .icon .span {
 }
 
 .containerArtikelHome .artikelHome .perArtikelHome small span {
-  color: #0e85e7;
+  color: #000000;
   font-weight: 700;
 }
 
 .containerArtikelHome .artikelHome .perArtikelHome p {
   font-size: 0.9rem;
-  color: #000;
+  color: #000000;
 }
 
 /* Property CSS Ekstrakulikuler*/
@@ -521,10 +571,19 @@ nav ul .search-icon .icon .span {
   -webkit-box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.2);
 }
+
+@media screen and (max-width: 576px) {
+.ekstrakulikuler .boxEkstrakulikuler .perBox {
+  width: 73px;
+  position: relative;
+  height: 170px;
+}
+  
+}
 .ekstrakulikuler .boxEkstrakulikuler .perBox img {
-  color: rgb(255, 255, 255);
+  color: rgb(109, 209, 255);
   border-style: solid;
-  border-width: 4px;
+  border-width: 3px;
   position: absolute;
   top: 0;
   left: 0;
@@ -558,11 +617,21 @@ nav ul .search-icon .icon .span {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #11cbfa;
+  background-color: rgb(109, 209, 255);
   color: #fff;
-  border-radius:20px;
+  border-radius:15px;
   -webkit-transform: translateY(50px);
   transform: translateY(50px);
+}
+
+@media screen and (max-width: 576px) {
+  .ekstrakulikuler .boxEkstrakulikuler .perBox h3 {
+    font-size: large;
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    bottom: -5px;
+  }
 }
 
 .ekstrakulikuler .boxEkstrakulikuler .perBox:hover h3 {
